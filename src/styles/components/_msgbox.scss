@@ -1,0 +1,43 @@
+.msgbox-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.60);
+    z-index: 8;
+    //cursor: pointer;
+  }
+
+
+  .msgbox {
+    @extend .box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 30%;
+    background-color: darkred;
+
+    h2 {
+        font-size: 1.5em;
+    }
+    .box-body {
+        font-size: 1.3em;
+        padding: 1em 2em ;
+    }
+
+    button,
+    a.button,
+    input[type="button"],
+    input[type="submit"]{
+        font-size: 1.0em;
+        position: relative;
+        margin-top: 2.5em;
+        margin-left: 33%;
+        margin-right: 17%;
+    }
+  }

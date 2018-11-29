@@ -1,0 +1,109 @@
+/**
+ * Main variables
+ */
+$font-stack: "Share Tech Mono", "Lucida Console", Monaco, monospace;
+
+/**
+ * Base styles
+ */
+html, body {
+  height: 100%;
+  font-family: $font-stack;
+  font-size: 1em;
+  background-color: #444;
+}
+
+/**
+ * Box
+ */
+.box {
+  box-sizing: border-box;
+  margin: 1.2em;
+  padding: 10px 6px;
+  background-color: darkblue;
+  color: rgba(255, 255, 255, 0.74);
+  box-shadow: 16px 16px 0px #222;
+
+  &.turquoise {
+    background-color: turquoise;
+  }
+  &.text-dark {
+    color: black;
+  }
+
+  /* box title */
+  h2 {
+    font-size: 1.3em;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    margin-bottom: -0.7em;
+    padding-bottom: 0;
+    &:before,
+    &:after {
+      border-top: 5px double rgba(255, 255, 255, 0.84);
+      background-color: transparent;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+
+  /* box body/content */
+  .box-body {
+    font-size: 1.2em;
+    padding: 2em 2em;
+    border: 5px double rgba(255, 255, 255, 0.84);
+  }
+
+  .action-box-body {
+    font-size: 1.0em;
+    padding: 2em 2em;
+    border: 5px double rgba(255, 255, 255, 0.84);
+  }
+
+  h2 + .box-body {
+    border-top: 0;
+  }
+
+}
+
+
+/* when dark text is required */
+.text-dark .box-body,
+.box.text-dark h2:before,
+.box.text-dark h2:after {
+  border-color: black;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: yellow;
+}
+
+::selection {
+  color: black;
+  background: yellow;
+}
+
+
+
+@import 'components/_typography.scss';
+@import 'components/_code.scss';
+@import 'components/_grid.scss';
+@import 'components/_forms.scss';
+@import 'components/_progressbar.scss';
+@import 'components/_msgbox.scss';
+
+
